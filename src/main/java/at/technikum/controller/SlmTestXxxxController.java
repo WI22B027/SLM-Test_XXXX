@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SlmTestXxxxController {
 
-    public static int save = 0;
+    public int save = 0;
 
     @RequestMapping("/api/factorial")
-    public static int getFactorial(@RequestParam int number){
+    public int getFactorial(@RequestParam int number){
         int fact = 1;
         for (int i = 2; i <= number; i++) {
             fact = fact * i;
@@ -20,7 +20,7 @@ public class SlmTestXxxxController {
     }
 
     @RequestMapping("/api/total")
-    public static int returnTotal(){
+    public int returnTotal(){
         return save;
     }
 }
