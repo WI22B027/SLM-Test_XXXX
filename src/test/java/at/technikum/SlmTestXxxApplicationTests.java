@@ -6,7 +6,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SpringBootTest
 class SlmTestXxxApplicationTests {
 
     @Test
@@ -39,4 +38,21 @@ class SlmTestXxxApplicationTests {
         assertEquals(factorial1+factorial2, result);
     }
 
+    @Test
+    void totalTest() {
+        //Arrange
+        int result = 144;
+
+        SlmTestXxxxController mc = new SlmTestXxxxController();
+
+        //Act
+        int factorial1 = mc.getFactorial(5);
+        int factorial2 = mc.getFactorial(4);
+
+        int save = mc.returnTotal();
+
+
+        //Assert
+        assertEquals(save, result);
+    }
 }
