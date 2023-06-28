@@ -10,13 +10,17 @@ public class SlmTestXxxxController {
     public static int save = 0;
 
     @RequestMapping("/api/factorial")
-    public static int getFactorial(@RequestParam int factorial){
+    public static int getFactorial(@RequestParam int number){
         int fact = 1;
-        for (int i = 2; i <= factorial; i++) {
+        for (int i = 2; i <= number; i++) {
             fact = fact * i;
         }
         save += fact;
         return fact;
     }
 
+    @RequestMapping("/api/total")
+    public static int returnTotal(){
+        return save;
+    }
 }
