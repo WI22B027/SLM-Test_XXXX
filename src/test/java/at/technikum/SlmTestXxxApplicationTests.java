@@ -7,7 +7,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 class SlmTestXxxApplicationTests {
 
     @Test
-    void contextLoads() {
+    void nameTest() {
+        //Arrange
+
+        //Act
+
+        //Assert
     }
 
 }
