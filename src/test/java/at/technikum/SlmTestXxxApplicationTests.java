@@ -23,4 +23,20 @@ class SlmTestXxxApplicationTests {
         assertEquals(factorial, result);
     }
 
+    @Test
+    void saveTest() {
+        //Arrange
+        int result = 144;
+
+        SlmTestXxxxController mc = new SlmTestXxxxController();
+
+        //Act
+        int factorial1 = mc.getFactorial(5);
+        int factorial2 = mc.getFactorial(4);
+
+
+        //Assert
+        assertEquals(factorial1+factorial2, result);
+    }
+
 }
